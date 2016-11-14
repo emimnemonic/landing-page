@@ -52,14 +52,14 @@ img {
 .text {
   position: absolute;
   top: 12%;
-  left: calc((100% - 767px) / 4);
+  left: calc((100% - 767px - 2em) / 2);
   text-align: left;
   max-width: 767px;
   padding: 1em; }
   @media only screen and (max-width: 768px) {
     .text {
       max-width: 90%;
-      left: calc((10%-2em) / 4);
+      left: auto;
       margin: 0; } }
   .text h2 {
     font: 700 2.4rem/3.2rem 'PT Serif', serif;
