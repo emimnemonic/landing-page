@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="author" content="emi">
+        <meta name="description" content="Every Other Website: A landing page that is just like every other page.">
+
+        <!-- Mobile Stuff -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <!-- Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Every Other Website">
+        <!--link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon.png"-->
+
+        <!-- Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Every Other Website">
+        <!--link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png"-->
+
+        <!--link rel="shortcut icon" href="favicon.ico"-->
+
+        <title>Every Other Website</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|PT+Serif:700" rel="stylesheet">
+        <link href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+
+    </head>
+    <header>
+        <div class="wrap">
+            <div id="slide-one"></div>
+            <div id="slide-two"></div>
+            <div id="slide-three"></div>
+            <div id="slide-four"></div>
+            <div id="slide-five"></div>
+        </div>
+        <div class="text">
+            <h2>This is Every Other Website.</h2>
+            <p><span id="text-one">Full of beautiful photos of hipsters drinking coffee.</span><span id="text-two"> Or making coffee.</span><span id="text-three"> Or coffee hanging out with stuff.</span><span id="text-four"> We love coffee.</span><span id="text-five"> The font is skinny.</span><span id="text-six"> Gray is the new black.</span><span id="text-seven"> We’ll keep building them
+                this way.</span><span id="text-eight"> Because you like it.</span><span id="text-nine"> Because we like it.</span></p>
+            <a class="btn" href="#">Have a lovely day</a>
+        </div>
+    </header>
+    <body>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+        <script>
+            $(document).ready(function () {
+               $('.wrap').slick({
+                   autoplay: true,
+                   autoplaySpeed: 4000,
+                   arrows: false,
+                   centerMode: true,
+                   cssEase: 'linear',
+                   draggable: false,
+                   fade: true,
+                   lazyLoad: 'ondemand',
+                   touchMove: false
+               });
+            });
+        </script>
+    </body>
+</html>

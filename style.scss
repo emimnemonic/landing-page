@@ -1,0 +1,143 @@
+html {
+    font-size: 20px;
+    color: #FFFCF9;
+    @media only screen and (max-width: 767px) {
+        font-size: 14px;
+    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font: 300 1.2rem/2rem 'Open Sans', sans-serif;
+}
+.wrap > div {
+    height: 100vh;
+    width: 100%;
+}
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@mixin fade-in($delay) {
+    -webkit-animation: fade-in 2s ease $delay forwards;
+    animation: fade-in 2s ease $delay forwards;
+}
+@mixin background($url) {
+    background: #808080 url($url) center center/cover;
+}
+// Background images for slides
+#slide-one {
+    @include background("img/@1x/every-other-website-background-coffee1@1x.png");
+}
+#slide-two {
+    @include background('img/@1x/every-other-website-background-coffee2@1x.png');
+}
+#slide-three {
+    @include background('img/@1x/every-other-website-background-coffee3@1x.png');
+}
+#slide-four {
+    @include background('img/@1x/every-other-website-background-coffee4@1x.png');
+}
+#slide-five {
+    @include background('img/@1x/every-other-website-background-coffee5@1x.png')
+}
+// Make slider full screen always
+.slick-slide {
+    height: 100vh;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.text {
+    position: absolute;
+    top: 12%;
+    left: calc((100% - 767px) / 4);
+    text-align: left;
+    max-width: 767px;
+    padding: 1em;
+    @media only screen and (max-width: 768px) {
+        max-width: 90%;
+        left: calc((10%-2em) / 4);
+        margin: 0;
+    }
+    h2 {
+        font: 700 2.4rem/3.2rem 'PT Serif', serif;
+        margin: 0 auto;
+        padding: 1em 0;
+    }
+    p {
+        margin: 0;
+    }
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+.btn {
+    text-align: center;
+    color: inherit;
+    max-width: 30%;
+    padding: 0.5em 1em;
+    margin-top: 2em;
+    border-radius: 12px;
+    border: 2px solid #FFFCF9;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    &:hover {
+        background-color: #8F8389;
+        border-color: #8F8389;
+    }
+    opacity: 0;
+    @include fade-in(22s);
+    @media only screen and (max-width: 767px) {
+        max-width: 50%;
+    }
+}
+// Fade in text effects
+
+span {
+    opacity: 0;
+}
+#text-one {
+    @include fade-in(2s);
+}
+#text-two {
+    @include fade-in(5s);
+}
+#text-three {
+    @include fade-in(8s);
+}
+#text-four {
+    @include fade-in(10s);
+}
+#text-five {
+    @include fade-in(12s);
+}
+#text-six {
+    @include fade-in(14s);
+}
+#text-seven {
+    @include fade-in(16s);
+}
+#text-eight {
+    @include fade-in(18s);
+}
+#text-nine {
+    @include fade-in(20s);
+}
